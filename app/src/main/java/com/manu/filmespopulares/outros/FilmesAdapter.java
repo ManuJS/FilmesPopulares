@@ -1,15 +1,18 @@
 package com.manu.filmespopulares.outros;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.manu.filmespopulares.R;
 import com.manu.filmespopulares.outros.Filme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,11 +21,11 @@ import java.util.List;
 public class FilmesAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater;
-    private List<Filme> filmes;
+    private static ArrayList<Filme> filmes;
 
-    public FilmesAdapter(Context context, List<Filme> filmes) {
+    public FilmesAdapter(Context context, ArrayList<Filme> result) {
         //Itens do listview
-        this.filmes = filmes;
+        this.filmes = result;
         //Objeto responsável por pegar o Layout do item.
         mInflater = LayoutInflater.from(context);
     }
@@ -56,7 +59,7 @@ public class FilmesAdapter extends BaseAdapter {
             //inflar as mesmas informacoes
             itemHolder = new ItemSuporte();
             itemHolder.txtFilmeTitulo = ((TextView) view.findViewById(R.id.filme_titulo));
-            //itemHolder.txtFilmeSinopse = ((TextView) view.findViewById(R.id.filme_sinopse));
+            itemHolder.txtFilmeSinopse = ((TextView) view.findViewById(R.id.filme_sinopse));
 
             //define os itens na view;
             view.setTag(itemHolder);
@@ -80,7 +83,7 @@ public class FilmesAdapter extends BaseAdapter {
      */
     private class ItemSuporte {
 
-        TextView txtFilmeTitulo;
-        TextView txtFilmeSinopse;
+        TextView txtFilmeTitulo, txtFilmeSinopse;
+        ImageView imageView;
     }
 }

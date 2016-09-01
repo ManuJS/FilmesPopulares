@@ -9,9 +9,7 @@ public class Filme {
     private String sinopseFilme;
 
     public Filme() {
-        this("", "");
     }
-
 
     public Filme(String tituloFilme, String sinopseFilme) {
         this.tituloFilme = tituloFilme;
