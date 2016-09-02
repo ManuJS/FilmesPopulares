@@ -1,7 +1,6 @@
-package com.manu.filmespopulares.outros;
+package com.manu.filmespopulares.Adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.manu.filmespopulares.R;
-import com.manu.filmespopulares.outros.Filme;
+import com.manu.filmespopulares.Models.Filme;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by emanu on 31/08/2016.

@@ -6,6 +6,7 @@
 
 
     <ImageView
+        android:id="@+id/filme_image"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:src="@drawable/download"

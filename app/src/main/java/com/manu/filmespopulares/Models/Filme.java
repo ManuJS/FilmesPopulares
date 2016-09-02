@@ -1,4 +1,4 @@
-package com.manu.filmespopulares.outros;
+package com.manu.filmespopulares.Models;
 
 /**
  * Created by emanu on 31/08/2016.
@@ -7,13 +7,23 @@ public class Filme {
 
     private String tituloFilme;
     private String sinopseFilme;
+    private int image; // drawable reference id
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
 
     public Filme() {
     }
 
-    public Filme(String tituloFilme, String sinopseFilme) {
+    public Filme(String tituloFilme, String sinopseFilme, int image) {
         this.tituloFilme = tituloFilme;
         this.sinopseFilme = sinopseFilme;
+        this.image = image;
     }
 
     public String getTituloFilme() {
